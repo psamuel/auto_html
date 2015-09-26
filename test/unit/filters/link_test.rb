@@ -50,15 +50,4 @@ class LinkTest < Test::Unit::TestCase
     assert_equal '<a href="http://rors.org" target="_blank">http://rors.org</a>', result
   end
 
-  def test_transform_with_short_link_name_option
-    filter = AutoHtml::Link.new(short_link_name: true)
-    result = filter.call("http://rors.org?some=params&and=more") 
-    assert_equal '<a href="http://rors.org?some=params&and=more" >http://rors.org</a>', result
-  end
-
-  def test_transform_with_short_link_name_option_false
-    filter = AutoHtml::Link.new(short_link_name: false)
-    result = filter.call("http://rors.org?some=params&and=more")
-    assert_equal '<a href="http://rors.org?some=params&and=more" >http://rors.org?some=params&and=more</a>', result
-  end
 end

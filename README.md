@@ -30,13 +30,24 @@ $ gem install auto_html
 
 ## Usage
 
-    AutoHtml::Link.new.call('Hey! Checkout out my blog: http://rors.org') { simple_format; link(target: 'blank')
-    => "<p>Hey! Checkout out my blog: <a href='http://rors.org' target='blank'>http://rors.org</a></p>"
-
+```ruby
+AutoHtml::Link.new.call('Hey! Checkout out my blog: http://rors.org')
+=> "Hey! Checkout out my blog: <a href='http://rors.org' target='blank'>http://rors.org</a>"
+```
 
 ## Bundled filters
 
-For filter list and options they support check: <http://github.com/dejan/auto_html/tree/master/lib/auto_html/filters>
+| Name              |
+| ----------------- |
+| Emoji             |
+| Gist              |
+| GoogleMap         |
+| Image             |
+| Instagram         |
+| Link              |
+| SimpleFormat      |
+| Vimeo             |
+| Youtube           |
 
 
 ## MIT License

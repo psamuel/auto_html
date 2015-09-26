@@ -2,8 +2,8 @@ Gem::Specification.new do |gem|
   gem.name = 'auto_html'
   gem.version = '2.0.0'
 
-  gem.summary = "Transform URIs to appropriate markup"
-  gem.description = "Automatically transforms URIs (via domain) and includes the destination resource (Vimeo, YouTube movie, image, ...) in your document"
+  gem.summary = "Plain text to HTML conversion"
+  gem.description = "Formats text, creates links and converts URLs to their HTML representation (ie. link to youtube will be transformed into embeded video played)"
 
   gem.author   = 'Dejan Simic'
   gem.email    = 'desimic@gmail.com'
@@ -13,6 +13,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'banzai',     '~> 0.1'
   gem.add_dependency 'tag_helper', '~> 0.2'
   gem.add_dependency 'rinku',      '~> 1.7'
+  gem.add_dependency 'gemoji',     '~> 2.1'
 
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'test-unit'
