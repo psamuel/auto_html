@@ -1,14 +1,17 @@
 auto_html 
 =========
 
-auto_html is a gem for transforming URLs to appropriate resource (image, link, YouTube, Vimeo video,...). 
-It's the perfect choice if you don't want to bother visitors with rich HTML editor or markup code, 
-but you still want to allow them to embed video, images, links and more on your site, purely by pasting URL.
+auto_html formats text, creates links and converts URLs to their HTML representation. For example, youtube URL will be 
+transformed into embeded video played.
+
+auto_html can be useful to you if you don't want to bother visitors with a rich HTML editor or markup code, but you 
+still want to allow them to embed video, images, links or other rich media content on your site, by merely pasting URLs.
 
 Check out the [live demo](http://rors.org/demos/auto_html).
 
 
-## Installation
+Installation
+------------
 
 Add this line to your application's Gemfile:
 
@@ -28,14 +31,18 @@ Or install it yourself as:
 $ gem install auto_html
 ```
 
-## Usage
+
+Usage
+-----
 
 ```ruby
 AutoHtml::Link.new.call('Hey! Checkout out my blog: http://rors.org')
 => "Hey! Checkout out my blog: <a href='http://rors.org' target='blank'>http://rors.org</a>"
 ```
 
-## Bundled filters
+
+Bundled filters
+---------------
 
 | Name              |
 | ----------------- |
@@ -50,7 +57,8 @@ AutoHtml::Link.new.call('Hey! Checkout out my blog: http://rors.org')
 | Youtube           |
 
 
-## MIT License
+MIT License
+-----------
 
 Copyright (c) 2015 Dejan Simic
 
