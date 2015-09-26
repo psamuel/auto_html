@@ -3,7 +3,7 @@ Gem::Specification.new do |gem|
   gem.version = '2.0.0'
 
   gem.summary = "Plain text to HTML conversion"
-  gem.description = "Formats text, creates links and converts URLs to their HTML representation (ie. link to youtube will be transformed into embeded video played)"
+  gem.description = "AutoHtml is a collection of filters that can transforming plain text into HTML code, converting URL's of images into `img` tags, YouTube URL's to embedded YouTube video player, plain URL's to links, and so on."
 
   gem.author   = 'Dejan Simic'
   gem.email    = 'desimic@gmail.com'

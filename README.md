@@ -1,14 +1,10 @@
-auto_html 
-=========
+AutoHtml 
+========
 
-auto_html formats text, creates links and converts URLs to their HTML representation. For example, youtube URL will be 
-transformed into embeded video played.
+AutoHtml is a collection of filters that can transforming plain text into HTML code, converting URL's of images 
+into `img` tags, YouTube URL's to embedded YouTube video player, plain URL's to links, and so on.
 
-auto_html can be useful to you if you don't want to bother visitors with a rich HTML editor or markup code, but you 
-still want to allow them to embed video, images, links or other rich media content on your site, by merely pasting URLs.
-
-Check out the [live demo](http://rors.org/demos/auto_html).
-
+Check out the [live demo](http://auto-html.github.io).
 
 Installation
 ------------
@@ -31,7 +27,6 @@ Or install it yourself as:
 $ gem install auto_html
 ```
 
-
 Usage
 -----
 
@@ -39,7 +34,6 @@ Usage
 AutoHtml::Link.new.call('Hey! Checkout out my blog: http://rors.org')
 => "Hey! Checkout out my blog: <a href='http://rors.org' target='blank'>http://rors.org</a>"
 ```
-
 
 Bundled filters
 ---------------
@@ -55,7 +49,6 @@ Bundled filters
 | SimpleFormat      |
 | Vimeo             |
 | Youtube           |
-
 
 MIT License
 -----------
