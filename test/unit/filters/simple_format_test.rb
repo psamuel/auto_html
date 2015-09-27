@@ -8,7 +8,6 @@ class SimpleFormatTest < Test::Unit::TestCase
     assert_equal '<p></p>', result
   end
 
-
   def test_transform
     filter = AutoHtml::SimpleFormat.new
     result = filter.call('Hey check out my blog => http://rors.org')
@@ -46,7 +45,5 @@ class SimpleFormatTest < Test::Unit::TestCase
     filter = AutoHtml::SimpleFormat.new(html_options: html_options)
     filter.call(text)
   end
-
-
 
 end
