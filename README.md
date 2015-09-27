@@ -1,10 +1,8 @@
 AutoHtml 
 ========
 
-AutoHtml is a collection of filters that can transforming plain text into HTML code, converting URL's of images 
-into `img` tags, YouTube URL's to embedded YouTube video player, plain URL's to links, and so on.
+AutoHtml is a collection of filters that transform plain text into HTML code.
 
-Check out the [live demo](http://auto-html.github.io).
 
 Installation
 ------------
