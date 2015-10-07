@@ -1,6 +1,12 @@
-AutoHtml.add_filter(:dailymotion).with(:width => 480, :height => 360) do |text, options|
-  text.gsub(/http:\/\/www\.dailymotion\.com.*\/video\/(.+)_*/) do
+AutoHtml.add_filter(:dailymotion).with(:width => 480, :height => 360, :scrolling => "no", :frameborder => 0, :allow_full_screen => false) do |text, options|
+  text.gsub(/http:\/\/www\.dailymotion\.com.*\/video\/([A-Za-z0-9]*)(_)([A-Za-z0-9._-]*)([?])([A-Za-z0-9=]*)/) do
     video_id = $1
-    %{<object type="application/x-shockwave-flash" data="http://www.dailymotion.com/swf/#{video_id}&related=0" width="#{options[:width]}" height="#{options[:height]}"><param name="movie" value="http://www.dailymotion.com/swf/#{video_id}&related=0"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><a href="http://www.dailymotion.com/video/#{video_id}?embed=1"><img src="http://www.dailymotion.com/thumbnail/video/#{video_id}" width="#{options[:width]}" height="#{options[:height]}"/></a></object>}
+    width = options[:width]
+    height = options[:height]
+    scrolling = options[:scrolling]
+    frameborder = options[:frameborder]
+    allow_full_screen = options[:allow_full_screen]
+
+    %{<iframe frameborder="#{frameborder}" scrolling="#{scrolling}" width="#{width}" height="#{height}" src="//www.dailymotion.com/embed/video/#{video_id}" #{allow_full_screen ? ' webkitAllowFullScreen mozallowfullscreen allowFullScreen' : ''}></iframe>}
   end
 end
